@@ -13,3 +13,71 @@ La empresa ABC se especializa en manera clientes que si bien son abordados en li
 Se necesita una solución en linea que permita pasar los clientes de la empresa XYZ a las empresas 123 y ABC en función del perfil del canal de compras del cliente, las empresas 123 y ABC utilizan sistemas de información o plataformas distintas, han logrado desarrollar un servicio web para recibir la información del cliente de la empresa XYZ, se han puesto de acuerdo para intercambiar la información en forma JSON.
 
 Desarrolle una solución tipo prueba de concepto, que permita realizar un escenarios que simule el ambiente antes descrito, utilizando un framework de integración asi como un patrón de integración que permita transmitir la información de los clientes.
+
+# Rutas en Camel
+
+Creacion de rutas de camel basadas en payload del Consumer
+
+## Flujo
+```
+                          .---> Customer valor Mayor a 100 -> f2f-service
+Customer --> camer-routes /
+                         \
+                          .-->  Customer valor Menor a 100 -> digital-service -> sqlite
+```
+
+## Servicio f2f-service
+
+Servicio en flask, para realizar pruebas en solitario se puede usar la colecion de
+ThunderClient en:
+
+```
+ f2f-service/thunder-collection_ms-f2f-flask.json
+```
+
+### Iniciar servicio flask
+
+``` 
+    cd f2f-service
+    python3 -m venv .venv
+    source .venv/bin/activate
+    python3 -m pip install -r requirements.txt
+    python3 main.py
+```
+
+## Servicio digital-service
+
+Servicio en NestJs, para realizar pruebas en solitario se puede usar la colecion de
+ThunderClient en:
+
+```
+ f2f-service/thunder-collection_ms-digital-nestjs.json
+```
+
+la base de datos es: db.sqlite
+
+
+### Iniciar servicio NestJs
+
+``` 
+    cd digital-service
+    npm install
+    npm run start:dev
+```
+
+# Servicio de  Ruta en Camel
+
+Aplicativo de camel que ejecuta rutas en base al payload enviado
+se puede usar la coleccion en ThuderClient para revisar el funcionamiento de la rutas en
+
+````
+ camel-rute/thunder-collection_camel-routes.json
+````
+### Iniciar Camel
+
+``` 
+    cd camel-rute
+    ./mvnw clean package
+    ./mvnw spring-boot:run
+```
+
