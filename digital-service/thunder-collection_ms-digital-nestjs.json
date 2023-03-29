@@ -1,0 +1,61 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "ms-digital-nestjs",
+    "dateExported": "2023-03-29T00:40:20.794Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "b81bea46-a34f-4c71-97d7-8b758cdf1464",
+            "colId": "e866af92-912a-4dd9-a3ba-82b34c97cdbd",
+            "containerId": "",
+            "name": "addNew",
+            "url": "http://127.0.0.1:3000/customer",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-03-18T20:10:21.819Z",
+            "modified": "2023-03-29T00:38:47.280Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"id\": 1,\n    \"name\": \"Lucia\",\n    \"gender\": \"Female\",\n    \"customer_dni\": \"1780923332\",\n    \"customer_channel\": \"Digital\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4543bd46-93ec-476b-95c0-df1fc649701e",
+            "colId": "e866af92-912a-4dd9-a3ba-82b34c97cdbd",
+            "containerId": "",
+            "name": "findByCode",
+            "url": "http://127.0.0.1:3000/customer/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-03-18T20:10:21.820Z",
+            "modified": "2023-03-29T00:37:37.272Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6d9265de-4c0d-48ae-8ea9-70b0f73e19c6",
+            "colId": "e866af92-912a-4dd9-a3ba-82b34c97cdbd",
+            "containerId": "",
+            "name": "findAll",
+            "url": "http://127.0.0.1:3000/customer",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-03-18T20:10:21.821Z",
+            "modified": "2023-03-29T00:37:57.584Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
