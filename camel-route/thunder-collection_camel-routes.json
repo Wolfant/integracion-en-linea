@@ -1,0 +1,57 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "camel-routes",
+    "dateExported": "2023-03-18T23:55:03.529Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "97e005ae-f21e-4b7e-9833-9ba0e01f4f7f",
+            "colId": "4498d766-83fe-45a7-b9fe-e265ae79a8f7",
+            "containerId": "",
+            "name": "Route1Test",
+            "url": "http://localhost:8080/factura",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-03-18T23:51:11.008Z",
+            "modified": "2023-03-18T23:53:27.431Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"client_id\": \"1212\",\n    \"client_name\": \"Antonio\",\n    \"date\": \"12/12/84\",\n    \"value\": 22.2,\n    \"id\": 30\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d1504350-fadc-425a-8831-9a5e87cd7e25",
+            "colId": "4498d766-83fe-45a7-b9fe-e265ae79a8f7",
+            "containerId": "",
+            "name": "Route2Test",
+            "url": "http://localhost:8080/factura",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-03-18T23:52:19.962Z",
+            "modified": "2023-03-18T23:52:54.653Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"client_id\": \"0310\",\n    \"client_name\": \"Lu\",\n    \"date\": \"03/10/90\",\n    \"value\": 200.2,\n    \"id\": 31\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
