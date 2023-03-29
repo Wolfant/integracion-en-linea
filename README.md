@@ -20,10 +20,10 @@ Creacion de rutas de camel basadas en payload del Consumer
 
 ## Flujo
 ```
-                          .---> Customer valor Mayor a 100 -> f2f-service
+                          .---> Customer channel f2f -> f2f-service
 Customer --> camer-routes /
                          \
-                          .-->  Customer valor Menor a 100 -> digital-service -> sqlite
+                          .-->  Customer channel Digital -> digital-service -> sqlite
 ```
 
 ## Servicio f2f-service
